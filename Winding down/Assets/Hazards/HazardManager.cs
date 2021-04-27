@@ -20,8 +20,7 @@ namespace Hazards
             StartGame();
             StartCoroutine(HazardRoutine());
         }
-
-
+        
         private WaitForSeconds minHazardWait = new WaitForSeconds(3.0f);
         private IEnumerator HazardRoutine()
         {
@@ -45,7 +44,7 @@ namespace Hazards
                 yield return flashDelay;
                 hazardSprite.enabled = false;
                 yield return flashDelay;
-                OnHazard.Invoke(idx);
+                OnHazard?.Invoke(idx);
             }
         }
     }

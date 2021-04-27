@@ -8,7 +8,8 @@ namespace Player
         public Transform playerVisual;
 
         private int pos = 1;
-        void Update()
+
+        private void Update()
         {
             transform.position += Vector3.down * (fallSpeed * Time.deltaTime);
 
