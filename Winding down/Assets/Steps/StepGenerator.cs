@@ -14,7 +14,8 @@ namespace Steps
         public Transform root;
     
         public GameObject stepPrefab;
-    
+
+        public UnityEngine.Camera wideViewCamera;
     
     
         private List<GameObject> steps = new List<GameObject>();
@@ -27,6 +28,11 @@ namespace Steps
                 go.transform.parent = root;
                 go.transform.Rotate(Vector3.up, 10 * i);
                 steps.Add(go);
+                var tr = wideViewCamera.transform;
+                var pos = tr.position;
+                pos.y = -stepCount * 0.5f * stepHeight;
+                tr.position = pos;
+                wideViewCamera.orthographicSize = stepCount * 0.5f * stepHeight;
             }
         }
 
