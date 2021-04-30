@@ -1,0 +1,11 @@
+{
+   "files.exclude": {
+      "**/*.fbx": true,
+      "**/*.meta": true,
+      "**/*.prefab": true,
+      "**/*.png": true,
+      "**/*.jpg": true,
+      "**/*.jpeg": true,
+      "**/*.controller": true,
+   }
+}
